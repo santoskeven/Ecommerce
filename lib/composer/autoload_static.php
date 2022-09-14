@@ -22,7 +22,9 @@ class ComposerStaticInitd889fece2725be93bc17eea59fdc2384
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Conexao' => __DIR__ . '/../..' . '/model/conexao.class.php',
         'Config' => __DIR__ . '/../..' . '/model/Config.class.php',
+        'Produtos' => __DIR__ . '/../..' . '/model/produtos.class.php',
         'Rotas' => __DIR__ . '/../..' . '/model/Rotas.class.php',
         'Smarty' => __DIR__ . '/..' . '/smarty/smarty/libs/Smarty.class.php',
         'SmartyCompilerException' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smartycompilerexception.php',

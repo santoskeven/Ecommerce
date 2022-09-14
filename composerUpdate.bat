@@ -1,1 +1,11 @@
-C:\xampp\htdocs\Keven\loja>php composer.phar update
+cd \
+
+cd xampp
+
+cd htdocs
+
+cd keven
+
+cd loja
+
+php composer.pahr update

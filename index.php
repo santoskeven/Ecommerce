@@ -2,9 +2,15 @@
     require_once'./lib/autoload.php';
 
     $rota = Rotas::get_SiteTemplate();
-    $carrinho = Rotas::pag_Carrinho();
-    $teste = Rotas::pag_teste();
+    
+    $conectarBanco = new Conexao();
 
+    $sql = "SELECT * FROM categorias";
+    $conectarBanco->ExecuteSQL($sql);
+
+    // $listar = $conectarBanco->ListarDados();
+
+    // echo $conectarBanco->TotalDados();
 ?>
 
 <!-- // 

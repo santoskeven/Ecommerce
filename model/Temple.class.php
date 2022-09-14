@@ -1,5 +1,4 @@
 <?php 
-
     Class Template extends Smarty{
         function __construct(){
             parent:: __construct();
