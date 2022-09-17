@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24d6e4a976cd22e571eec65f983d685f",
+    "content-hash": "90bbf95869b4e88bf0dc5022e708a458",
     "packages": [
         {
             "name": "phpmailer/phpmailer",
@@ -83,72 +83,6 @@
                 }
             ],
             "time": "2022-08-22T09:22:00+00:00"
-        },
-        {
-            "name": "smarty/smarty",
-            "version": "v4.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/smarty-php/smarty.git",
-                "reference": "97aeb14c6fc2fb733938809926e2f9d6c581a70d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/smarty-php/smarty/zipball/97aeb14c6fc2fb733938809926e2f9d6c581a70d",
-                "reference": "97aeb14c6fc2fb733938809926e2f9d6c581a70d",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.5 || ^7.5",
-                "smarty/smarty-lexer": "^3.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0.x-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "libs/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Monte Ohrt",
-                    "email": "monte@ohrt.com"
-                },
-                {
-                    "name": "Uwe Tews",
-                    "email": "uwe.tews@googlemail.com"
-                },
-                {
-                    "name": "Rodney Rehm",
-                    "email": "rodney.rehm@medialize.de"
-                },
-                {
-                    "name": "Simon Wisselink",
-                    "homepage": "https://www.iwink.nl/"
-                }
-            ],
-            "description": "Smarty - the compiling PHP template engine",
-            "homepage": "https://smarty-php.github.io/smarty/",
-            "keywords": [
-                "templating"
-            ],
-            "support": {
-                "forum": "https://github.com/smarty-php/smarty/discussions",
-                "issues": "https://github.com/smarty-php/smarty/issues",
-                "source": "https://github.com/smarty-php/smarty/tree/v4.2.0"
-            },
-            "time": "2022-08-01T21:57:38+00:00"
         }
     ],
     "packages-dev": [],

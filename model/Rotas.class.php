@@ -18,13 +18,26 @@
             return self::get_SitePagPrincipal() . '/' . self::$pasta_view;
         }
 
+        static function pag_produtos(){
+            return self::get_SitePagPrincipal() . '/produtos';
+        }
+
+        static function pag_blog(){
+            return self::get_SitePagPrincipal() . '/blog';
+        }
+
+        static function pag_about(){
+            return self::get_SitePagPrincipal() . '/about';
+        }
+
+        static function pag_contato(){
+            return self::get_SitePagPrincipal() . '/contato';
+        }
+
         static function pag_Carrinho(){
             return self::get_SitePagPrincipal() . '/carrinho';
         }
 
-        static function pag_teste(){
-            return self::get_SitePagPrincipal() . '/teste';
-        }
 
 
         static function PegarPagina () {
@@ -36,19 +49,11 @@
                 self::$pag = explode('/', $pagina);
 
                 $pagina = 'controller/' . self::$pag[0] . '.php';
-
-                switch(self::$pag[0]){
-                    case 'home':
-                        require_once 'view/' . 'home.php';
-                        break;
-                }
                
                 if(file_exists($pagina)){
                     require_once $pagina;
                 }else{ 
-                    if(self::$pag[0] != 'home'){
-                        require_once 'error.php';
-                    }            
+                    require_once 'error.php';    
                 }
                    
             }else{
@@ -57,6 +62,19 @@
          
         }
 
+        static function PegarImgPasta(){
+            return 'media/imgs/roupas/';
+        }
+
+        static function PegarImgUrl(){
+            return self::get_SitePagPrincipal() . '/' . self::PegarImgPasta(); 
+        }
+
+        static function PegarImgLink($img){
+            $imagem = self::PegarImgUrl() . $img ;
+           return $imagem;
+        }
+ 
     }
 
 ?>

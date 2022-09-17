@@ -1,6 +1,5 @@
 {
     "require": {
-        "smarty/smarty":"^4.2",
         "phpmailer/phpmailer": "^6.5"
     },
 

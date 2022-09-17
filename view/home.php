@@ -1,3 +1,6 @@
+<?php 
+    $rota = Rotas::get_SiteTemplate();
+?>
 <section class="header_container">
 
     <section  class="conteudo">
@@ -53,60 +56,22 @@
         </header>
 
         <div class="MostrarProduto_1">
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
+            <?php 
+                $produtos = new Produtos();
+                $produtos->GetProdutos();
 
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
+                $itens = $produtos->GetItens();
 
+                foreach($itens as $key => $value){
+            ?>
             <div class="wrap">
                 <div class="ProdUnico">
                     <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
+                       <a href="#"><img src="<?php echo $value['pro_img']?>"></a>
                         </div>
                         <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
+                            <p><?php echo $value['pro_slug']?></p>
+                            <h4><?php echo $value['pro_nome']?></h4>
                             <div class="InfoEstrelas">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -115,134 +80,20 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                             <div class="Preco_Carrinho">
-                                <p>$76</p>
+                                <p>$ <?php echo $value['pro_valor']?></p>
                                 <button><i class="fa-solid fa-cart-shopping"></i></button>
                             </div>                            
                         </div>
                 </div>
             </div>
-
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
-
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
-
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
-
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
-
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
-        </div><!--MostrarProdutos-->
+            <?php } ?>
+        </div>
         
-    </section><!--prod_conteúdo-->
+    </section>
 
     <div class="ShowPromo">
-        <!-- <img src="imgs/prmoEuro.png"> -->
-    </div><!--footerPromo-->
+        <img src="<?php echo $rota ?>/imgs/prmoEuro.png">
+    </div>
 
     <section class="prod_conteudo">
 
@@ -252,60 +103,22 @@
         </header>
 
         <div class="MostrarProduto_1">
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
+            <?php 
+                $produtos = new Produtos();
+                $produtos->GetProdutos();
 
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
+                $itens = $produtos->GetItens();
 
+                foreach($itens as $key => $value){
+            ?>
             <div class="wrap">
                 <div class="ProdUnico">
                     <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
+                       <a href="#"><img src="<?php echo $value['pro_img']?>"></a>
                         </div>
                         <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
+                            <p><?php echo $value['pro_slug']?></p>
+                            <h4><?php echo $value['pro_nome']?></h4>
                             <div class="InfoEstrelas">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -314,132 +127,18 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                             <div class="Preco_Carrinho">
-                                <p>$76</p>
+                                <p>$ <?php echo $value['pro_valor']?></p>
                                 <button><i class="fa-solid fa-cart-shopping"></i></button>
                             </div>                            
                         </div>
                 </div>
             </div>
-
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
-
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
-
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
-
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
-
-            <div class="wrap">
-                <div class="ProdUnico">
-                    <div class="imgProdU">
-                        <img src="<?php echo $rota?>/imgs/roupas/camisa1.png">
-                        </div>
-                        <div class="Info_ProdUnico">
-                            <p>Lorem ipsum</p>
-                            <h4>Lorem ipsum dolor amet</h4>
-                            <div class="InfoEstrelas">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="Preco_Carrinho">
-                                <p>$76</p>
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>                            
-                        </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
         
-    </section><!--prod_conteúdo-->
+    </section>
 
-    <div class="cont_hot_categ">
+    <!-- <div class="cont_hot_categ">
         <div class="hot_unic w50 categ_hot_1">
 
         </div>
@@ -459,7 +158,7 @@
         <div class="hot_unic w30 categ_hot_5">
 
         </div>
-    </div>
+    </div> -->
 
     <section class="NotNovidades">
         <div class="esquerda">

@@ -5,8 +5,16 @@
     
     $conectarBanco = new Conexao();
 
-    $sql = "SELECT * FROM categorias";
+    $sql = "SELECT * FROM produtos";
     $conectarBanco->ExecuteSQL($sql);
+
+    // echo 'etssdf';
+//    echo $conectarBanco->LinkAtivo();
+
+    // echo '<pre>';
+    // // var_dump($conectarBanco->ListarDadosAll());
+    // echo '</pre>';
+   
 
     // $listar = $conectarBanco->ListarDados();
 
@@ -34,7 +42,7 @@
     <head>
         <title>EComercieCara1</title>
         <meta charset="UTF-8">
-        <link href="<?php  echo $rota ?>/tema/css/style.css" rel="stylesheet">
+        <link href="<?php echo $rota ?>/tema/css/style.css" rel="stylesheet">
 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,17 +50,17 @@
 
     <body>
 
-        <header>
-            <img src="<?php  echo $rota ?>/imgs/logo.png">
+        <header class='main_header'>
+            <img src="<?php echo $rota ?>/imgs/logo.png">
 
             <nav>
                 <ul id="MobileMenu">
-                    <li class="link_Atc"><a href="home">Home</a></li>
-                    <li><a href="produtos">Shop</a></li>
-                    <li><a href="blog">Blog</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="contato">Contato</a></li>
-                    <li><a href="carrinho"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                    <li <?php echo $conectarBanco->LinkAtivo('home') ?>><a href="<?php echo Rotas::get_SitePagPrincipal() ?>">Home</a></li>
+                    <li <?php echo $conectarBanco->LinkAtivo('produtos') ?>><a href="<?php echo Rotas::pag_produtos()?>">Produtos</a></li>
+                    <li <?php echo $conectarBanco->LinkAtivo('blog') ?>><a href="<?php echo Rotas::pag_blog()?>">Blog</a></li>
+                    <li <?php echo $conectarBanco->LinkAtivo('sobre') ?>><a href="<?php echo Rotas::pag_about()?>">About</a></li>
+                    <li <?php echo $conectarBanco->LinkAtivo('contato') ?>><a href="<?php echo Rotas::pag_contato()?>">Contato</a></li>
+                    <li <?php echo $conectarBanco->LinkAtivo('carrinho') ?>><a href="<?php echo Rotas::pag_Carrinho()?>"><i class="fa-solid fa-bag-shopping"></i></a></li>
                 </ul>
             </nav>
             <i id="mobile" class=" fa-solid fa-bars"></i>

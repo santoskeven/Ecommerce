@@ -23,6 +23,16 @@
 
         }
 
+        function LinkAtivo($link){
+            $url = explode('/',@$_GET['pag'])[0];
+
+            if($url == $link){
+                echo 'class="link_Atc"';
+            }else{
+                return false;
+            }
+        }
+
         private function conectar () {
             $options = [
                 PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8",
@@ -41,6 +51,10 @@
 
         function ListarDados (){
             return $this -> obj -> fetch(PDO::FETCH_ASSOC);
+        }
+
+        function ListarDadosAll (){
+            return $this -> obj -> fetchAll();
         }
 
         function TotalDados (){

@@ -6,15 +6,38 @@
 
         function GetProdutos (){
             //query para buscar um produto de uma categoria especifica.
-            $this->query = "SELECT * FROM {$this->prefix}produtos p INNER JOIN {$this->prefix}categorias c ON p.pro_categoria = 
+            $query = "SELECT * FROM {$this->prefix}produtos p INNER JOIN {$this->prefix}categorias c ON p.pro_categoria = 
             c.cate_id";
 
-            // $this -> query .= "ORDER BY pro_id DESC"; 
+            $query .= " ORDER BY pro_id DESC"; 
 
-            $this -> ExecuteSQL($this->query);
+            $this -> ExecuteSQL($query);
 
             $this -> GetLista();
 
+        }
+
+        function GetProdutosID ($id){
+            //query para buscar um produto de uma categoria especifica.
+            $query = "SELECT * FROM {$this->prefix}produtos p INNER JOIN {$this->prefix}categorias c ON p.pro_categoria = 
+            c.cate_id";
+
+            $query .= " AND pro_id = {$id}"; 
+
+            $this -> ExecuteSQL($query);
+
+            $this -> GetLista();
+
+        }
+
+
+        function GetProdutosAll (){
+            //query para buscar todos os elemento da tabela
+            $query = "SELECT * FROM produtos";
+
+            // $this -> query .= "ORDER BY pro_id DESC"; 
+
+           $this -> ExecuteSQL($query);
         }
 
        private function GetLista (){
@@ -29,7 +52,7 @@
             'pro_altura' => $listagem['pro_altura'],
             'pro_largura' => $listagem['pro_largura'],
             'pro_comprimento' => $listagem['pro_comprimento'],
-            'pro_img' => $listagem['pro_img'],
+            'pro_img' => Rotas::PegarImgLink($listagem['pro_img']),
             'pro_slug' => $listagem['pro_slug'],
             // 'pro_ref' => $listagem['pro_ref'],
             'cate_nome' => $listagem['cate_nome'],
