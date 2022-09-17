@@ -52,10 +52,14 @@
 
         <header class='main_header'>
             <img src="<?php echo $rota ?>/imgs/logo.png">
+            
+            <!-- <?php 
+            // echo Rotas::get_SitePagPrincipal();
+            ?> -->
 
             <nav>
                 <ul id="MobileMenu">
-                    <li <?php echo $conectarBanco->LinkAtivo('home') ?>><a href="<?php echo Rotas::get_SitePagPrincipal() ?>">Home</a></li>
+                    <li <?php echo $conectarBanco->LinkAtivo('http://localhost/Keven/loja/')?>><a href="<?php echo Rotas::get_SitePagPrincipal()?>">Home</a></li>
                     <li <?php echo $conectarBanco->LinkAtivo('produtos') ?>><a href="<?php echo Rotas::pag_produtos()?>">Produtos</a></li>
                     <li <?php echo $conectarBanco->LinkAtivo('blog') ?>><a href="<?php echo Rotas::pag_blog()?>">Blog</a></li>
                     <li <?php echo $conectarBanco->LinkAtivo('sobre') ?>><a href="<?php echo Rotas::pag_about()?>">About</a></li>

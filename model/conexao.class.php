@@ -25,11 +25,16 @@
 
         function LinkAtivo($link){
             $url = explode('/',@$_GET['pag'])[0];
+            $urlMain = Rotas::get_SitePagPrincipal();
+
+            if($urlMain == $link && $url == ''){
+                echo 'class="link_Atc"';
+            }
 
             if($url == $link){
                 echo 'class="link_Atc"';
             }else{
-                return false;
+                return false;   
             }
         }
 

@@ -7,7 +7,7 @@
         private  static $pasta_view = 'view';
 
         static function get_SitePagPrincipal(){
-            return Config::SITE_URL . '/' .Config::SITE_PASTA;
+            return Config::SITE_URL . '/' . Config::SITE_PASTA;
         }
 
         static function get_SitePagRaiz(){
@@ -15,27 +15,27 @@
         }
 
         static function get_SiteTemplate(){
-            return self::get_SitePagPrincipal() . '/' . self::$pasta_view;
+            return self::get_SitePagPrincipal()  . self::$pasta_view;
         }
 
         static function pag_produtos(){
-            return self::get_SitePagPrincipal() . '/produtos';
+            return self::get_SitePagPrincipal() . 'produtos';
         }
 
         static function pag_blog(){
-            return self::get_SitePagPrincipal() . '/blog';
+            return self::get_SitePagPrincipal() . 'blog';
         }
 
         static function pag_about(){
-            return self::get_SitePagPrincipal() . '/about';
+            return self::get_SitePagPrincipal() . 'sobre';
         }
 
         static function pag_contato(){
-            return self::get_SitePagPrincipal() . '/contato';
+            return self::get_SitePagPrincipal() . 'contato';
         }
 
         static function pag_Carrinho(){
-            return self::get_SitePagPrincipal() . '/carrinho';
+            return self::get_SitePagPrincipal() . 'carrinho';
         }
 
 
