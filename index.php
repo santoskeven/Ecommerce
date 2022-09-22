@@ -40,7 +40,7 @@
 <html>
 
     <head>
-        <title>EComercieCara1</title>
+        <title><?php echo Config::SITE_NOME ?></title>
         <meta charset="UTF-8">
         <link href="<?php echo $rota ?>/tema/css/style.css" rel="stylesheet">
 
@@ -62,7 +62,7 @@
                     <li <?php echo $conectarBanco->LinkAtivo('http://localhost/Keven/loja/')?>><a href="<?php echo Rotas::get_SitePagPrincipal()?>">Home</a></li>
                     <li <?php echo $conectarBanco->LinkAtivo('produtos') ?>><a href="<?php echo Rotas::pag_produtos()?>">Produtos</a></li>
                     <li <?php echo $conectarBanco->LinkAtivo('blog') ?>><a href="<?php echo Rotas::pag_blog()?>">Blog</a></li>
-                    <li <?php echo $conectarBanco->LinkAtivo('sobre') ?>><a href="<?php echo Rotas::pag_about()?>">About</a></li>
+                    <li <?php echo $conectarBanco->LinkAtivo('sobre') ?>><a href="<?php echo Rotas::pag_about()?>">Sobre</a></li>
                     <li <?php echo $conectarBanco->LinkAtivo('contato') ?>><a href="<?php echo Rotas::pag_contato()?>">Contato</a></li>
                     <li <?php echo $conectarBanco->LinkAtivo('carrinho') ?>><a href="<?php echo Rotas::pag_Carrinho()?>"><i class="fa-solid fa-bag-shopping"></i></a></li>
                 </ul>
@@ -140,6 +140,7 @@
             <div style="width: 100%; padding: 3rem 2%; text-align: center; font-size: 1.5rem">2022 tech - HTML CSS EComercie Template</div>
         </footer>
 
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsM0UCAfKbsVjwYjveeWhfcOaELswj7R8" type="text/javascript"></script>
         <script src="https://kit.fontawesome.com/fb43290b99.js" crossorigin="anonymous"></script>
         <script src="<?php  echo $rota ?>/tema/js/func.js"></script>
 

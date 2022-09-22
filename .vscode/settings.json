@@ -4,6 +4,7 @@
         "classmap",
         "Conexao",
         "Contato",
+        "conteudo",
         "phpmailer",
         "PHPMAILLER",
         "SMTPAUTH",
