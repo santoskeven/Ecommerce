@@ -2,28 +2,31 @@
     $rota = Rotas::get_SiteTemplate();
 ?>
 <div class="topoSobre">
-<h2>#readmore</h2>
-<p>read hall case studies about our products!</p>
+    <h2>#KnowUs</h2>
+    <p>read hall case studies about our products!</p>
 </div>
 
 <section class="contentImgSobre">
-<div class="sobre_img">
-    <img src="<?php echo $rota?>/imgs/phonework.png">
-</div>
-<div class="sobre_text">
-    <h2>Who We Are?</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur semper risus, eu congue tortor gravida sit amet. 
-        Suspendisse malesuada nisi viverra nisi bibendum rhoncus. Pellentesque volutpat sapien eu neque eleifend aliquam. Proin tempor lacus urna, quis dapibus magna sollicitudin pretium. 
-        Curabitur non velit eu nulla rutrum dignissim quis at ipsum. Fusce dignissim, erat ac lobortis dapibus, orci sem convallis est, at efficitur justo tortor sit amet ex
-    </p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur semper risus, eu congue tortor gravida sit amet. </p>
-</div>
+    <div class="sobre_img">
+        <img src="<?php echo $rota?>/imgs/phonework.png">
+    </div>
+    <div class="sobre_text">
+        <h2>Who We Are?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur semper risus, eu congue tortor gravida sit amet. 
+            Suspendisse malesuada nisi viverra nisi bibendum rhoncus. Pellentesque volutpat sapien eu neque eleifend aliquam. Proin tempor lacus urna, quis dapibus magna sollicitudin pretium. 
+            Curabitur non velit eu nulla rutrum dignissim quis at ipsum. Fusce dignissim, erat ac lobortis dapibus, orci sem convallis est, at efficitur justo tortor sit amet ex
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur semper risus, eu congue tortor gravida sit amet. </p>
+    </div>
 </section>
 
 <section class="contentDownApp">
 <h2>Download Our App</h2>
 <div class="downApp">
-    <img src="#">
+<video width="320" height="240" autoplay muted loop="loop">
+  <source src="http://localhost/Keven/loja/view/imgs/Shopping_App.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 </div>
 </section>
 

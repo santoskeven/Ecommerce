@@ -4,8 +4,8 @@
 ?>
 
     <div class="topoSobre">
-        <h2>#readmore</h2>
-        <p>read hall case studies about our products!</p>
+        <h2>#Card</h2>
+        <p>Add your coupon code & SAVE upto 70%!</p>
     </div>
 
     <section class="contentCarrinho">

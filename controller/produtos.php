@@ -1,11 +1,11 @@
+<div class="TopoProdut">
+        <h2>#stayHome</h2>
+        <p>Save more with coupons & up to 70% off!</p>
+    </div>
+
 <section class="produtos_container">
 
     <section class="prod_conteudo">
-
-        <header>
-            <h2>Feature Products</h2>
-            <p>Summer collection New Modern Design</p>
-        </header>
 
         <div class="MostrarProduto_1">
 

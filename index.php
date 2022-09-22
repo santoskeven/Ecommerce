@@ -43,6 +43,7 @@
         <title><?php echo Config::SITE_NOME ?></title>
         <meta charset="UTF-8">
         <link href="<?php echo $rota ?>/tema/css/style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

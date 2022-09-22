@@ -1,3 +1,8 @@
+<div class="topoContato">
+    <h2>#KnowUs</h2>
+    <p>read hall case studies about our products!</p>
+</div>
+
 <section class="maps">
     <div class="MapsInfo">
       <h2>Faça-nos uma visita</h2>
