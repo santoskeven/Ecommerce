@@ -5,6 +5,7 @@
         "Conexao",
         "Contato",
         "conteudo",
+        "paginacao",
         "phpmailer",
         "PHPMAILLER",
         "SMTPAUTH",

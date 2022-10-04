@@ -1,5 +1,15 @@
 <?php 
     $rota = Rotas::get_SiteTemplate();
+    
+    // echo Rotas::get_SitePagPrincipal();
+
+    $banco = new Blog();
+    $PaginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+
+    $TotalPorPagina = 4;
+
+    $depoimentos = $banco->listarEventos(($PaginaAtual-1) * $TotalPorPagina, $TotalPorPagina);
+
 ?>
 
     <div class="topo">
@@ -7,65 +17,46 @@
         <p>read hall case studies about our products!</p>
     </div>
 
-    <section class="content_blog">
-        <div class="img_data">
-            <h2>13/01</h2>
-            <img src="<?php echo $rota ?>/imgs/layer.jpg">
-        </div>
-        <div class="infos_content">
-            <div class="limit_text">
-                <h2>Lorem ipsum dolor amet</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-            </p>
+    <?php 
+         $blog = new Conexao();
+         $sql = "SELECT * FROM blog";
+         $blog->ExecuteSQL($sql);
+     
+        //  $depoimentos = $blog->ListarDadosAll();
+
+         foreach($depoimentos as $key => $value){
+    ?>
+
+        <section class="content_blog">
+            <div class="img_data">
+                <h2><?php echo $value['data']?></h2>
+                <img src="<?php echo $rota ?>/imgs/<?php echo $value['imagem']?>">
             </div>
+            <div class="infos_content">
+                <div class="limit_text">
+                    <h2><?php echo $value['titulo']?></h2>
+                    <p><?php echo $value['desc']?></p>
+                </div>
 
-            <div class="line_cont"><p>continue reading</p> <span class="line"></span> </div>
-           
-        </div>
-    </section>
-
-    <section class="content_blog">
-        <div class="img_data">
-            <h2>13/01</h2>
-            <img src="<?php echo $rota ?>/imgs/layer.jpg">
-        </div>
-        <div class="infos_content">
-            <div class="limit_text">
-                <h2>Lorem ipsum dolor amet</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-            </p>
+                <div class="line_cont"><p>continue reading</p> <span class="line"></span> </div>
+            
             </div>
+        </section>
 
-            <div class="line_cont"><p>continue reading</p> <span class="line"></span> </div>
-           
-        </div>
-    </section>
-
-
-    <section class="content_blog">
-        <div class="img_data">
-            <h2>13/01</h2>
-            <img src="<?php echo $rota ?>/imgs/layer.jpg">
-        </div>
-        <div class="infos_content">
-            <div class="limit_text">
-                <h2>Lorem ipsum dolor amet</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-            </p>
-            </div>
-
-            <div class="line_cont"><p>continue reading</p> <span class="line"></span> </div>
-           
-        </div>
-    </section>
-
+    <?php }?>
+   
     <section class="paginacao">
-        <span>1</span>
-        <span>1</span>
-        <span> --> </span>
+        <?php 
+            $TotalPorPagina = ceil(count($banco->listarEventos()) / $TotalPorPagina);
+            $link = Rotas::get_SitePagPrincipal();
+
+            for ($i=1; $i <= $TotalPorPagina; $i++) { 
+                if($i == $PaginaAtual)
+                    echo '<a href="'.$link.'blog?pagina='.$i.'" class="link_atc">'.$i.'</a>';
+                else
+                    echo '<a href="'.$link.'blog?pagina='.$i.'">'.$i.'</a>';
+            }
+        ?>
     </section>
 
     <section class="NotNovidades">

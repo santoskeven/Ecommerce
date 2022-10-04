@@ -1,5 +1,6 @@
 <?php 
     $rota = Rotas::get_SiteTemplate();
+
 ?>
 <section class="header_container">
 
@@ -17,7 +18,7 @@
         <img src="<?php echo $rota?>/imgs/img2.png">
     </section><!--content-->
 
-</section><!--header_container-->
+</section> 
 
 <section class="produtos_container">
     
@@ -57,17 +58,20 @@
 
         <div class="MostrarProduto_1">
             <?php 
-                $produtos = new Produtos();
-                $produtos->GetProdutos();
+               
+            $produtos = new Produtos();
+            $produtos->GetProdutosCateHome(1);
 
-                $itens = $produtos->GetItens();
+            $itens = $produtos->GetItens();
 
                 foreach($itens as $key => $value){
+                      $ref_Slug = $value['pro_id'].'/'.$value['pro_slug'];
+
             ?>
             <div class="wrap">
                 <div class="ProdUnico">
                     <div class="imgProdU">
-                       <a href="#"><img src="<?php echo $value['pro_img']?>"></a>
+                       <a href="infoProdutos/<?php echo $ref_Slug?>"><img src="<?php echo $value['pro_img']?>"></a>
                         </div>
                         <div class="Info_ProdUnico">
                             <p><?php echo $value['pro_slug']?></p>
@@ -104,17 +108,18 @@
 
         <div class="MostrarProduto_1">
             <?php 
-                $produtos = new Produtos();
-                $produtos->GetProdutos();
-
-                $itens = $produtos->GetItens();
+              $produtos = new Produtos();
+              $produtos->GetProdutosCateHome(2);
+  
+              $itens = $produtos->GetItens();
 
                 foreach($itens as $key => $value){
+                    $ref_Slug = $value['pro_id'].'/'.$value['pro_slug'];
             ?>
             <div class="wrap">
                 <div class="ProdUnico">
                     <div class="imgProdU">
-                       <a href="#"><img src="<?php echo $value['pro_img']?>"></a>
+                       <a href="infoProdutos/<?php echo $ref_Slug?>"><img src="<?php echo $value['pro_img']?>"></a>
                         </div>
                         <div class="Info_ProdUnico">
                             <p><?php echo $value['pro_slug']?></p>
@@ -138,7 +143,7 @@
         
     </section>
 
-    <!-- <div class="cont_hot_categ">
+     <div class="cont_hot_categ">
         <div class="hot_unic w50 categ_hot_1">
 
         </div>
@@ -158,7 +163,7 @@
         <div class="hot_unic w30 categ_hot_5">
 
         </div>
-    </div> -->
+    </div>
 
     <section class="NotNovidades">
         <div class="esquerda">
@@ -172,7 +177,7 @@
                 <input type="submit">
             </form>
         </div>
-    </section><!--NotNovidades-->
+    </section>
 
-</section><!--produtor_container-->
+</section>
 

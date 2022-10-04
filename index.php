@@ -5,20 +5,37 @@
     
     $conectarBanco = new Conexao();
 
-    $sql = "SELECT * FROM produtos";
+    $sql = "SELECT * FROM categorias";
     $conectarBanco->ExecuteSQL($sql);
 
-    // echo 'etssdf';
-//    echo $conectarBanco->LinkAtivo();
+    
 
+    // echo 'etssdf';
+//    echo $conectarBanco->();
+
+//     $prod = new Produtos();
+//     $prod->GetProdutos();
+//    $contI = $prod->ListarDadosAll();
+
+
+//     echo $prod->TotalDados ();
     // echo '<pre>';
-    // // var_dump($conectarBanco->ListarDadosAll());
+    // //  var_dump(  $contI );
     // echo '</pre>';
    
 
     // $listar = $conectarBanco->ListarDados();
 
     // echo $conectarBanco->TotalDados();
+
+    // $produtos = new Conexao();
+    // $produtos->ListarDados();
+    // $itens = $produtos->GetItens();
+
+    // echo '<pre>';
+    // var_dump($produtos);
+    // echo '</pre>';
+
 ?>
 
 <!-- // 
@@ -141,9 +158,22 @@
             <div style="width: 100%; padding: 3rem 2%; text-align: center; font-size: 1.5rem">2022 tech - HTML CSS EComercie Template</div>
         </footer>
 
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsM0UCAfKbsVjwYjveeWhfcOaELswj7R8" type="text/javascript"></script>
-        <script src="https://kit.fontawesome.com/fb43290b99.js" crossorigin="anonymous"></script>
-        <script src="<?php  echo $rota ?>/tema/js/func.js"></script>
+       
+        <!-- <script src="https://kit.fontawesome.com/fb43290b99.js" crossorigin="anonymous"></script> -->
+       
+      
+    
+    <?php 
+        $url = $_GET['pag'];
+
+        if($url == 'contato'){
+    ?>  
+       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsM0UCAfKbsVjwYjveeWhfcOaELswj7R8" type="text/javascript"></script> 
+      <script src="<?php  echo $rota ?>/tema/js/map.js"></script>
+      <script src="<?php  echo $rota ?>/tema/js/func.js"></script> 
+      
+    <?php }?>
+      
 
     </body>
 

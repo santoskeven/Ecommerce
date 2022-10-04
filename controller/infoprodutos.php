@@ -16,20 +16,22 @@
             <img src="<?php echo $value['pro_img'] ?>">
         </div>
 
-       <?php 
-       $produtos->GetProdutos();
-
-       $previous = $produtos->GetItens();
-        foreach($previous as $key => $value){
-       ?>
+       
         <div class="imgs_previus">
             <div class="scroll">
+            <?php 
+                $produtos->GetProdutos();
+
+                $previous = $produtos->GetItens();
+                    foreach($previous as $key => $value){
+            ?>
                 <div class="previus_single">
                     <img src="<?php echo $value['pro_img'] ?>">
                 </div>
+            <?php } ?>
             </div>
         </div>
-        <?php } ?>
+       
 
     </div>
 

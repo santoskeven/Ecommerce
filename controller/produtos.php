@@ -1,3 +1,16 @@
+<?php 
+
+    // $produtos = new Produtos();
+    // $produtos->GetProdutosAll();
+    // // $itens = $produtos->GetItens();
+
+    // echo '<pre>';
+    // var_dump($produtos);
+    // echo '</pre>';
+
+
+?>
+
 <div class="TopoProdut">
         <h2>#stayHome</h2>
         <p>Save more with coupons & up to 70% off!</p>
@@ -12,17 +25,19 @@
             <?php 
 
             $produtos = new Produtos();
-            $produtos->GetProdutos();
+            $produtos->GetProdutosCateProd(1);
 
-            // echo '<pre>';
-            // var_dump($produtos->GetItens());
-            // echo '</pre>';
+            echo '<pre>';
+            // var_dump($produtos->GetProdutosAll());
+            echo '</pre>';
 
             $itens = $produtos->GetItens();
       
             foreach($itens as $key => $value){
                 // echo $key;
                $ref_Slug = $value['pro_id'].'/'.$value['pro_slug'];
+
+            //    var_dump($ref_Slug);  
             ?>
 
                 <div class="wrap">
@@ -66,7 +81,7 @@
             <?php 
 
             $produtos = new Produtos();
-            $produtos->GetProdutos();
+            $produtos->GetProdutosCateProd(2);
 
             // echo '<pre>';
             // var_dump($produtos->GetItens());

@@ -38,7 +38,7 @@
             }
         }
 
-        private function conectar () {
+        function conectar () {
             $options = [
                 PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8",
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING
@@ -53,6 +53,17 @@
             $this->obj = $this-> conectar() -> prepare($query);
             return $this->obj->execute();
         }
+
+        // function listarEventos ($query) {
+        //     if($inicio == null && $fim == null){
+        //         $this->obj = $this-> conectar() -> prepare($query);
+        //     }else {
+        //         $query .= " LIMIT $inicio,$fim";
+        //         $this->obj = $this-> conectar() -> prepare($query);
+        //     }
+
+        //     return $this->obj->execute();
+        // }
 
         function ListarDados (){
             return $this -> obj -> fetch(PDO::FETCH_ASSOC);
