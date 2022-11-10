@@ -10,12 +10,10 @@ A partir do commit "Base final", pretendo trabalhar de uma fomra mais detalhada 
 A partir daqui irei trabalhar com novas implementações, sejam, novas ou melhores fomrmas de estruturação, novas funções ou formas de aplicar essas 
 funções e por ultimo e não menos importante, trabalhar na otimização do site.
 
--
--
 
-HISTÓRIOCO DE VERSÕES:
+- HISTÓRIOCO DE VERSÕES:
 
-     versão 0.0.1
+      versão 0.0.1
   
       - Modelos único de roupa para homens e mulheres.
       
