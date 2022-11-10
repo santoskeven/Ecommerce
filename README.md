@@ -14,10 +14,17 @@ HISTÓRIOCO DE VERSÕES:
 
   versão 0.0.1 --
       Modelos único de roupa para homens e mulheres.
+      
       Modança na imagem de promoção e inserção completa de textos complementares dentro do elemento.
+      
       Mudanças nas imagens usadas no Elemento "hot" e inserção de textos complementares dentro do elemento.
+      
       Mudança nas imagens de topo do campo de Produtos, Blog, Sobre, Contato e Carrinho.
+      
       Compatibilidade mobile no conteúdo de Contato
+      
       Mudança no Layout de Maps
+      
       Mundança na UX do formulário de contato
+      
       Otimização das imagens ultilizadas no projeo 
