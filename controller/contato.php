@@ -4,27 +4,33 @@
 </div>
 
 <section class="maps">
-    <div class="MapsInfo">
-      <h2>Faça-nos uma visita</h2>
-
-      <p>Escritório Central</p>
-
-      <div class="contac_single">
-        <i class="fa-solid fa-location-dot"></i>
-        <p>Rua BH1 NILO PEREIRA - BARREIRINHA - AM</p>
-     </div> 
-     <div class="contac_single">
-        <i class="fa-solid fa-location-dot"></i>
-        <p>Atendimento de Segunda a Sexta</p>
-     </div> 
-
-     <div class="contac_single">
-        <i class="fa-solid fa-location-dot"></i>
-        <p>Atendimento presencial das 8H ás 18h</p>
-     </div> 
-    </div>
 
     <div class="wraper-map">
+
+        <div class="MapsInfo">
+            <h2>Faça-nos uma visita</h2>
+
+            <p>Escritório Central</p>
+
+            <div class="contac_single">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Rua BH1 NILO PEREIRA - BARREIRINHA - AM</p>
+            </div> 
+            <div class="contac_single">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Atendimento de Segunda a Sexta</p>
+            </div> 
+
+            <div class="contac_single">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Atendimento presencial das 8H ás 18h</p>
+            </div> 
+
+            <div class="contac_single">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Atendimento presencial das 8H ás 18h</p>
+            </div> 
+        </div>
 
         <div class="wrape-map3">
 

@@ -22,7 +22,7 @@
         <div class="carInfos">
             <span><input type="checkbox"></span>  
             <span><i class="fa-solid fa-xmark"></i></span>       
-            <span><img src="<?php echo $rota?>/media/imgs/roupas/camisa1.png"></span> 
+            <span><img src="<?php echo $rota?>/media/imgs/roupas/camisa13.png"></span> 
             <span>Camisa preta simples</span>
             <span>R$ 60.00</span>
             <span><input value="1" type="number"></span>
@@ -32,7 +32,7 @@
         <div class="carInfos">
             <span><input type="checkbox"></span>  
             <span><i class="fa-solid fa-xmark"></i></span>       
-            <span><img src="<?php echo $rota?>/media/imgs/roupas/camisa1.png"></span> 
+            <span><img src="<?php echo $rota?>/media/imgs/roupas/camisa13.png"></span> 
             <span>Camisa preta simples</span>
             <span>R$ 60.00</span>
             <span><input value="1" type="number"></span>
@@ -42,7 +42,7 @@
         <div class="carInfos">
             <span><input type="checkbox"></span>  
             <span><i class="fa-solid fa-xmark"></i></span>       
-            <span><img src="<?php echo $rota?>/media/imgs/roupas/camisa1.png"></span> 
+            <span><img src="<?php echo $rota?>/media/imgs/roupas/camisa13.png"></span> 
             <span>Camisa preta simples</span>
             <span>R$ 60.00</span>
             <span><input value="1" type="number"></span>

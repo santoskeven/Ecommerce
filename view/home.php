@@ -96,7 +96,14 @@
     </section>
 
     <div class="ShowPromo">
-        <img src="<?php echo $rota ?>/imgs/prmoEuro.png">
+        <div class="cont_text">
+            <h2>Repair Services</h2>  
+            
+            <p>Up To <b>70% Off</b> - All t-shirts & acessories</p>
+
+            <button>Explore More</button>
+        </div>
+        <img src="<?php echo $rota ?>/imgs/oculos2.png">
     </div>
 
     <section class="prod_conteudo">
@@ -145,23 +152,34 @@
 
      <div class="cont_hot_categ">
         <div class="hot_unic w50 categ_hot_1">
+            <span>crazy deals</span>
+            <h2>buy 1 get 1 free</h2>
+            <p>the best classic  dress is an  sale at cara</p>
 
+            <button>Learn More</button>
         </div>
         
         <div class="hot_unic w50 categ_hot_2">
+            <span>spring/summer</span>
+            <h2>upcomming season</h2>
+            <p>the best classic  dress is an  sale at cara</p>
 
+            <button>Learn More</button>
         </div>
 
-        <div class="hot_unic w30 categ_hot_3">
-
+        <div class="hot_unic w30 categ_hot_3 hot_color">
+            <h2>SEASON SALE</h2>
+            <p>winter Collection 50% Off</p>
         </div>
 
-        <div class="hot_unic w40 categ_hot_4">
-            
+        <div class="hot_unic w40 categ_hot_4 hot_color">
+            <h2 style="font-size: 2.4rem">NEW FOOTWEAR COLLECTION</h2>
+            <p>spring/summer</p>
         </div>
 
-        <div class="hot_unic w30 categ_hot_5">
-
+        <div class="hot_unic w30 categ_hot_5 hot_color">
+            <h2>T-SHIRTS</h2>
+            <p>New Trandy Prints</p>
         </div>
     </div>
 
@@ -172,7 +190,7 @@
         </div>
 
         <div class="direita">
-            <form>
+            <form id='SubForm' >
                 <input type="text" placeholder="Digite seu Email"> 
                 <input type="submit">
             </form>

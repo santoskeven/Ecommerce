@@ -159,8 +159,8 @@
         </footer>
 
        
-        <!-- <script src="https://kit.fontawesome.com/fb43290b99.js" crossorigin="anonymous"></script> -->
-       
+        <script src="https://kit.fontawesome.com/fb43290b99.js" crossorigin="anonymous"></script>
+       <script src="<?php  echo $rota ?>/tema/js/form.js"></script>
       
     
     <?php 
